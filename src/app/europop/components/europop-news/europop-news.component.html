@@ -1,0 +1,13 @@
+<ng-container *ngIf="data">
+    <div class="news-header">
+        <div class="top d-flex align-items-center gap-2">
+            <i class="fa-solid fa-plus"></i>
+            <h6 class="mb-0">ახალი ამბები</h6>
+        </div>
+        <hr class="my-3">
+        <div class="bottom">
+
+        </div>
+    </div>
+    <app-europop-card [itm]="item" *ngFor="let item of data.data"></app-europop-card>
+</ng-container>

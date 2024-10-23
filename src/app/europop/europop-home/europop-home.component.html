@@ -1,0 +1,21 @@
+<div class="home-wrap">
+    <div class="header">
+        <h1 class="text-center mx-5">გაეცანი შენზე მორგებულ სპორტულ სიახლეებსა და ანალიტიკურ სტატიებს.</h1>
+        <div class="d-flex">
+            <a href="/register" class="btn mx-auto register-btn px-3 rounded-3">რეგისტრაცია</a>
+        </div>
+    </div>
+    <div class="inner-home">
+        <app-europop-pinned-cards></app-europop-pinned-cards>
+        <div class="outer-main-wrap">
+            <div class="main">
+                <app-europop-news></app-europop-news>
+                <app-europop-newsticker></app-europop-newsticker>
+                <app-europop-authors-component></app-europop-authors-component>
+            </div>
+            <app-europop-aside [latestNewsHeader]="'home'" [endpointForLatestNews]="'posts/more-latest'"></app-europop-aside>
+        </div>
+    </div>
+</div>
+
+

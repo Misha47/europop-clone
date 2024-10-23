@@ -1,0 +1,21 @@
+<div class="category-wrap">
+    <div class="category-inner">
+        <div class="main">
+            <div *ngIf="categoryInfo" class="mt-5">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div>
+                        <h5>{{categoryInfo.data.name}}</h5>
+                        <p class="mb-0">{{categoryInfo.data.subscribersCount + " გამომწერი • " + fixedResourceNumber + " სტატია"}}</p>
+                    </div>
+                    <button class="subscribe-btn rounded-5">გამოწერა</button>
+                </div>
+                
+                <hr>
+            </div>
+            <ng-container *ngIf="data">
+                <app-europop-card [itm]="item" *ngFor="let item of data.data"></app-europop-card>
+            </ng-container>
+        </div>
+        <app-europop-aside [latestNewsHeader]="'home'" [endpointForLatestNews]="'posts/more-latest'"></app-europop-aside>
+    </div>
+</div>

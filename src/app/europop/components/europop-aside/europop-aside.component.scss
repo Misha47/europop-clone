@@ -1,0 +1,22 @@
+.last-news{
+    border-radius: 12px;
+    background-color: rgb(20, 21, 22);
+}
+.socials{
+    width: 100%;
+    background-color: rgb(31, 32, 33);
+    border-radius: 12px;
+    overflow: hidden;
+    a{
+        padding: 0px;
+        height: 52px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+        
+    }
+}
+.aside-wrap{
+    width: 375px;
+}

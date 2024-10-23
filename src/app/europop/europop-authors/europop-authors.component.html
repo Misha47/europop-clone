@@ -1,0 +1,20 @@
+<div class="author-wrap">
+    <div class="author-inner">
+
+        <div class="main">
+            <div class="header">
+                <div *ngIf="authors">
+                    <h5>{{authors.title}}</h5>
+                    <p>{{authors.description}}</p>
+                </div>
+            </div>
+    
+            <div class="card-wrap">
+                <ng-container *ngIf="authors">
+                    <app-europop-author-card *ngFor="let item of authors.data" [item]="item"></app-europop-author-card>
+                </ng-container>
+            </div>
+        </div>
+        <app-europop-aside [latestNewsHeader]="'home'" [endpointForLatestNews]="'posts/more-latest'"></app-europop-aside>
+    </div>
+</div>

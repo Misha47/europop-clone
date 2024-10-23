@@ -1,0 +1,13 @@
+<div class="newsticker-wrap" *ngIf="news">
+    <h5>NEWSTICKER</h5>
+    <p>მეტი ბოლო სიახლე</p>
+    <div class="content">
+        <ng-container *ngIf="news">
+            <a class="text-decoration-none text-light" *ngFor="let item of news.data" href="posts/{{item.id}}">
+                <div class="post-title">
+                    <h6>{{item.title}}</h6>
+                </div>
+            </a>
+        </ng-container>
+    </div>
+</div>

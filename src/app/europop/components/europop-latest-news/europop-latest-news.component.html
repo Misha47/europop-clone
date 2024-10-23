@@ -1,0 +1,32 @@
+<div class="latest-news-wrap" [class]="header === 'details' ? 'scrollable' : ''" *ngIf="data">
+    <h5 *ngIf="header === 'home' || header === 'details'">ბოლო სიახლეები</h5>
+    <h5 *ngIf="header === 'search'">სტატიები</h5>
+    <ng-container *ngIf="header === 'home' && data">
+        <div class="list">
+            <a class="text-decoration-none text-light" *ngFor="let item of data.data" href="posts/{{item.id}}">
+                <div class="post-title">
+                    <h6>{{item.title}}</h6>
+                </div>
+            </a>
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="header === 'search' && data">
+        <div class="list">
+            <a class="text-decoration-none text-light" *ngFor="let item of data.data.posts" href="posts/{{item.id}}">
+                <div class="post-title">
+                    <h6>{{item.title}}</h6>
+                </div>
+            </a>
+        </div>
+    </ng-container>
+    <ng-container *ngIf="header === 'details' && data">
+        <div class="list">
+            <a class="text-decoration-none text-light" *ngFor="let item of data" href="posts/{{item.id}}">
+                <div class="post-title">
+                    <h6>{{item.title}}</h6>
+                </div>
+            </a>
+        </div>
+    </ng-container>
+</div>

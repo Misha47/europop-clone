@@ -1,0 +1,38 @@
+.home-wrap{
+    width: 100%;
+    min-height: 90vh;
+    background: url("https://europop.ge/images/coverNotAuth.png");
+
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.inner-home{
+    width: 100%;
+    max-width: 1220px;
+    margin: 0px auto;
+    display: flow-root;
+}
+.header{
+    margin-top: 80px;
+    h1{
+        padding-top: 100px;
+        padding-bottom: 40px;
+    }
+}
+
+.register-btn{
+    background-color: var(--main-orange);
+}
+.outer-main-wrap{
+    display: flex;
+    align-items: flex-start;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+.main{
+    width: calc(100% - 415px);
+}

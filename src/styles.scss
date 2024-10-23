@@ -1,0 +1,33 @@
+*{
+    outline: none !important;
+    margin: 0;
+    padding: 0;
+    box-shadow: none !important;    
+    scrollbar-width: thin;
+    scrollbar-color: #f15a22 #000000;
+}
+
+:root {
+  --main-orange: #f15a22;
+  --bs-body-bg: #000 !important;
+}
+
+[data-bs-theme=dark] {
+  --bs-body-bg: rgb(13, 14, 15) !important;
+}
+
+.offcanvas-backdrop{
+    position: inherit !important;
+}
+
+
+$theme-colors: (
+  "primary": #0074d9,
+  "danger": #ff4136
+);
+
+.nav-tabs .nav-link {
+  border: none;
+
+
+}

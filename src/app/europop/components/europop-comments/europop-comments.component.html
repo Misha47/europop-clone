@@ -1,0 +1,31 @@
+<button class="bg-transparent border-0" type="button" (click)="getComments()" data-bs-toggle="modal" attr.data-bs-target="#commentsModal{{id}}">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1.17071 18.8293L1.70104 19.3596L1.17071 18.8293ZM3.56572 16.2929L4.10187 15.7684L3.56572 16.2929ZM3.56533 16.4347L4.09566 16.965L3.56533 16.4347ZM18.25 10C18.25 14.5563 14.5563 18.25 10 18.25V19.75C15.3848 19.75 19.75 15.3848 19.75 10H18.25ZM10 1.75C14.5563 1.75 18.25 5.44365 18.25 10H19.75C19.75 4.61522 15.3848 0.25 10 0.25V1.75ZM1.75 10C1.75 5.44365 5.44365 1.75 10 1.75V0.25C4.61522 0.25 0.25 4.61522 0.25 10H1.75ZM4.10187 15.7684C2.6461 14.2801 1.75 12.2455 1.75 10H0.25C0.25 12.6532 1.31073 15.0601 3.02957 16.8173L4.10187 15.7684ZM1.70104 19.3596L4.09566 16.965L3.035 15.9043L0.640381 18.299L1.70104 19.3596ZM10 18.25H1.24142V19.75H10V18.25ZM0.640381 18.299C0.104905 18.8344 0.484161 19.75 1.24142 19.75V18.25C1.8205 18.25 2.11052 18.9501 1.70104 19.3596L0.640381 18.299ZM3.02957 16.8173C2.78457 16.5668 2.77965 16.1597 3.035 15.9043L4.09566 16.965C4.42911 16.6315 4.42411 16.0979 4.10187 15.7684L3.02957 16.8173Z" fill="currentColor"></path>
+        <circle cx="6" cy="10" r="1" fill="currentColor"></circle>
+        <circle cx="10" cy="10" r="1" fill="currentColor"></circle>
+        <circle cx="14" cy="10" r="1" fill="currentColor"></circle>
+    </svg>
+</button>
+<div class="modal fade" id="commentsModal{{id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content p-2">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel" *ngIf="data">{{data.count + " კომენტარი"}}</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+            <div class="modal-body">
+                <ng-container  *ngIf="data">
+                    <div class="data" *ngFor="let item of data.data">
+    
+                        <div class="d-flex gap-2">
+                            <h5>{{item.author.username}}</h5>
+                            <p>{{item.createdAt | date}}</p>
+                        </div>
+                        <p>{{item.text}}</p>
+                        <hr>
+                    </div>
+                </ng-container>
+            </div>
+      </div>
+    </div>
+  </div>

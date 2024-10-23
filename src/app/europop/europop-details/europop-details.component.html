@@ -1,0 +1,11 @@
+<div class="details-wrap mx-auto" *ngIf="detailsData">
+    <div class="upper-content">
+        <div class="main">
+            <img src="{{detailsData.data.image.fileUrl}}" class="rounded-2 w-100" alt="">
+            <h5 class="subtitle my-3" *ngIf="detailsData.data.subtitle">{{detailsData.data.subtitle}}</h5>
+            <h5 class="my-3">{{detailsData.data.title}}</h5>
+            <div id="iframe"></div>
+        </div>
+        <app-europop-latest-news [header]="'details'" [endpoint]="detailsData.data.categories"></app-europop-latest-news>
+    </div>
+</div>

@@ -1,0 +1,52 @@
+<div class="outer-main-wrap">
+    <div class="main" *ngIf="data">
+        <div class="query">ძებნის შედეგი <span>{{resultHeader}}</span>-სთვის</div>
+        <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <button class="nav-link active text-light" id="nav-article-tab" data-bs-toggle="tab" data-bs-target="#nav-article" type="button" role="tab" aria-controls="nav-article" aria-selected="true">სტატიები</button>
+                <button class="nav-link text-light" id="nav-europop-tab" data-bs-toggle="tab" data-bs-target="#nav-europop" type="button" role="tab" aria-controls="nav-europop" aria-selected="false">europop+</button>
+                <button class="nav-link text-light" id="nav-interest-tab" data-bs-toggle="tab" data-bs-target="#nav-interest" type="button" role="tab" aria-controls="nav-interest" aria-selected="false">ინტერესები</button>
+                <button class="nav-link text-light" id="nav-authors-tab" data-bs-toggle="tab" data-bs-target="#nav-authors" type="button" role="tab" aria-controls="nav-authors" aria-selected="false">ავტორები</button>
+            </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active mt-3" id="nav-article" role="tabpanel" aria-labelledby="nav-article-tab" tabindex="0">
+                <app-europop-card [itm]="item" *ngFor="let item of data.data.posts"></app-europop-card>
+            </div>
+            <div class="tab-pane fade" id="nav-europop" role="tabpanel" aria-labelledby="nav-europop-tab" tabindex="0">Europop</div>
+            <div class="tab-pane fade" id="nav-interest" role="tabpanel" aria-labelledby="nav-interest-tab" tabindex="0">
+                <div class="interests" *ngFor="let interest of data.data.interests">
+                    <div class="item my-2">
+                        <img class="rounded-5" width="50" height="50" src="{{interest.image ? interest.image.fileUrl : '../../../../../assets/europop-default-profile-picture.jpg'}}" alt="">
+                        <ng-container *ngIf="interest">
+
+                            <a href="category/{{interest.id}}" class="text d-flex flex-column justify-content-center ms-3 text-decoration-none text-light">
+                                <p class="mb-1">{{interest.name}}</p>
+                                <p class="mb-0">{{interest.subscriptionsCount + " გამომწერი"}}</p>
+                            </a>
+                        </ng-container>
+                    </div>
+                </div>
+                <h5 class="mt-5" *ngIf="!data.data.interests.length">მითითებული საძიებო სიტყვით, ინტერესები ვერ მოიძებნა!</h5>
+            </div>
+            <div class="tab-pane fade" id="nav-authors" role="tabpanel" aria-labelledby="nav-authors-tab" tabindex="0">
+                <div class="interests " *ngFor="let author of data.data.authors">
+                    <div class="item my-2">
+                        <img class="rounded-5" width="50" height="50" src="{{author.avatar.fileUrl ? author.avatar.fileUrl : '../../../../../assets/europop-default-profile-picture.jpg'}}" alt="">
+                        <ng-container *ngIf="author">
+
+                            <a href="authors/{{author.id}}" class="text d-flex flex-column justify-content-center ms-3 text-decoration-none text-light">
+                                <p class="mb-1">{{author.firstName + " " + author.lastName}}</p>
+                                <p class="mb-0">{{author.subscribersCount + " გამომწერი"}}</p>
+                            </a>
+                        </ng-container>
+                    </div>
+                </div>
+                <div *ngIf="!data.data.authors.length">
+                    <h5 class="mt-5">მითითებული საძიებო სიტყვით, ავტორები ვერ მოიძებნა!</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <app-europop-aside [latestNewsHeader]="'search'" [endpointForLatestNews]="'search?query='+resultHeader"></app-europop-aside>
+</div>

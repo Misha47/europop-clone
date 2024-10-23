@@ -1,0 +1,26 @@
+.author-wrap{
+    width: 100%;
+    max-width: 1220px;
+    margin: 0px auto;
+    display: flow-root;
+    
+}
+.author-inner{
+    margin-top: 200px;
+    display: flex;
+    align-items: flex-start;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+.card-wrap{
+    width: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.main{
+    width: calc(100% - 415px);
+}

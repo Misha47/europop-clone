@@ -1,0 +1,44 @@
+.author-wrap{
+    background-color: rgb(20, 21, 22);
+    padding: 24px 0px 20px;
+    border-radius: 12px;
+    position: relative;
+    .header{
+        padding: 0px 24px;
+        margin-bottom: 24px;
+        display: flex;
+        align-items: flex-start;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+    }
+    .cards-slider{
+        width: max-content;
+        display: flex;
+        flex-shrink: 0;
+        gap: 20px;
+        padding-inline: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+.show-more{
+    display: flex;
+    align-items: center;
+    a{
+        text-decoration: none;
+        color: #F15A22;
+    }
+}
+
+.icon{
+    margin-left: 8px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color:#F15A22;
+    color: rgb(28, 28, 29);
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex !important;
+}
+

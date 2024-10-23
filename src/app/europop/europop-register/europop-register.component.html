@@ -1,0 +1,40 @@
+<div class="form-wrap">
+        <input type="text" [(ngModel)]="emailField" (keyup)="validEmail($event)">
+        <span>{{!isValidEmail && emailField ? '' : 'გთხოვთ, შეავსოთ მეილის ველი'}}</span>
+        <input type="password" [(ngModel)]="passwordField" (keyup)="validPassword($event)">
+        <span>{{!isValidPassword && passwordField ? '' : 'გთხოვთ, შეავსოთ პაროლის ველი'}}</span>
+        <div class="valid-msg-wrap">
+            <ul>
+                <li>
+                    <div class="check-icon" [class]="hasLength ? 'bg-success' : 'bg-dark'">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <span>მინიმუმ 8 სიმბოლო</span>
+                </li>
+                <li>
+                    <div class="check-icon" [class]="hasUpperLetters ? 'bg-success' : 'bg-dark'">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <span>დიდი ლათინური ასო (A-დან Z-მდე)</span>
+                </li>
+                <li>
+                    <div class="check-icon" [class]="hasLowerLetters ? 'bg-success' : 'bg-dark'">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <span>პატარა ლათინური ასო (a-დან z-მდე)</span>
+                </li>
+                <li>
+                    <div class="check-icon" [class]="hasDigits ? 'bg-success' : 'bg-dark'">
+                        <i class="fa-solid fa-check" [class]="hasDigits ? 'text-success' : 'text-light'"></i>
+                    </div>
+                    <span>ერთი ციფრი (0-დან 9-მდე)</span>
+                </li>
+            </ul>
+        </div>
+        <input type="password" [(ngModel)]="confirmPasswordField">
+        <button [disabled]="isValidEmail && isValidPassword">რეგისტრაცია</button>
+    <div class="offer-to-login">
+        <p>არ გაქვთ ანგარიში?</p>
+        <a href="europop/login">ავტორიზაცია</a>
+    </div>
+</div>

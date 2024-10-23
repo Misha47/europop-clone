@@ -1,0 +1,104 @@
+.authors-details-wrap{
+    padding-bottom: 80px;
+    overflow-x: hidden;
+}
+
+.cover-background{
+    position: relative;
+    width: 100%;
+    height: 280px;
+    img{
+        object-fit: cover;
+
+    }
+}
+
+.author-card{
+    margin: 60px auto 80px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 1200px;
+    border: none;
+    .author-image{
+        flex-shrink: 0;
+        position: relative;
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        margin-right: 50px;
+        img{
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            border-radius: inherit;
+        }
+        
+    }
+    .author-info{
+        h5{
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+        .content-info{
+            p{
+                color: rgba(255, 255, 255, 0.5);
+            }
+        }
+    }
+    .subscribition{
+        margin-left: auto;
+        button{
+            border: none;
+            height: 38px;
+            border-radius: 20px;
+            font-size: 13px;
+            padding: 0px 16px;
+            background-color: #F15A22;
+        }
+    }
+}
+
+.e-logo{
+    position: absolute;
+    right: -5px;
+    bottom: -5px;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 5px solid rgb(13, 14, 15);
+    background-color: #F15A22;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+        svg{
+        height: 23px;
+        color: rgb(255, 255, 255) !important;
+    }
+}
+.main-wrap{
+    width: 100%;
+    max-width: 1220px;
+    margin: 0px auto;
+    display: flow-root;
+}
+.content{
+    display: flex;
+    align-items: flex-start;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+    .left{
+        width: calc(100% - 415px);
+    }
+}
+
+.nav-tabs{
+    scrollbar-width: none;
+}

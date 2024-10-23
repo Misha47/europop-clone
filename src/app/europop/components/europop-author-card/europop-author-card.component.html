@@ -1,0 +1,43 @@
+<div class="author-card">
+    <div class="cover">
+        <img src="{{item.coverImage.fileUrl}}" alt="">
+        <a href="authors/{{item.id}}" target="_blank">
+            <img src="{{item.avatar.fileUrl}}" alt="">
+        </a>
+    </div>
+    <div class="content">
+        <a href="authors/{{item.id}}" target="_blank">{{item.firstName + " " + item.lastName}}</a>
+        <div class="more-info">
+            <div class="subscribers">
+                <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="8" cy="5.25" r="3.75" stroke="currentColor" stroke-width="1.5"></circle>
+                    <path d="M1.3335 15.6667C1.3335 11.9848 4.31826 9 8.00016 9C9.09779 9 10.1335 9.26526 11.0466 9.73518" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+                    <path d="M14.3809 12.332L11.4346 15.2783" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+                    <path d="M9.6665 13.5117L11.4343 15.2795" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+                </svg>
+                <p>{{item.subscribersCount}}</p>
+            </div>
+            <div class="likes">
+                <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.94876 8.54839V2.52712C8.94876 1.68371 8.26505 1 7.42165 1V1C6.57824 1 5.89453 1.68371 5.89453 2.52711V9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+                    <path d="M17.4995 9.12791V3.68727C17.4995 2.84387 16.8158 2.16016 15.9724 2.16016V2.16016C15.129 2.16016 14.4453 2.84387 14.4453 3.68727V8.54726" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+                    <path d="M5.89386 9.49841C3.47601 7.7747 0.0462454 9.95198 2.15994 11.4043C2.20378 11.4344 2.25331 11.4607 2.30211 11.4818L2.53047 11.5807C4.29237 12.3437 5.68407 13.7946 6.38551 15.5819V15.5819C7.18949 17.6304 9.17386 18.9985 11.3746 18.9985H11.6373C13.6966 18.9985 15.5425 17.7283 16.2783 15.8049V15.8049V15.8049C17.0859 13.6938 17.5 11.4525 17.5 9.19214V8.54688" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+                    <path d="M11.6961 9.4026V7.01893C11.6961 6.25987 11.0807 5.64453 10.3217 5.64453V5.64453C9.56261 5.64453 8.94727 6.25987 8.94727 7.01894V9.4026" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+                    <path d="M14.4461 9.4026V7.01893C14.4461 6.25987 13.8307 5.64453 13.0717 5.64453V5.64453C12.3126 5.64453 11.6973 6.25987 11.6973 7.01894V9.4026" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+                </svg>
+                <p>{{item.likesCount}}</p>
+            </div>
+        </div>
+        <button class="sub-btn">
+            <span>გამოწერა</span>
+            <div class="sub-icon">
+                <svg width="16" height="19" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="7.5" cy="5.25391" r="3.75" stroke="currentColor" stroke-width="1.5"></circle>
+                    <path d="M0.832031 15.6706C0.832031 11.9887 3.8168 9.00391 7.4987 9.00391C8.59633 9.00391 9.632 9.26917 10.5451 9.73909" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+                    <path d="M14.168 14.4219L10.0013 14.4219" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+                    <path d="M12.082 12.3379V16.5046" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+                </svg>
+            </div>
+        </button>
+    </div>
+</div>
